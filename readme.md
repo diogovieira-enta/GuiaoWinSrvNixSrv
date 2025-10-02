@@ -1,6 +1,6 @@
 # WinSrv(Windows Server)[DNS + AD + FTP + SMB] --- NixSrv(Linux Server)[Nginx/apache2, SMTP, Imap/pop3]
 
-Req: Um dominio. (No-IP/Cloudflare). Em caso pode ser usado o proprio DNS do WinSrv. Ambas alternativas vao ser exploradas.
+Req: Um dominio. (No-IP/Cloudflare). Em caso pode ser usado o proprio DNS do WinSrv. Ambas alternativas vãp ser exploradas.
 
 ## Iniciar as duas Maquinas WinSrv, NixSrv
 
@@ -31,7 +31,7 @@ Para configurar é do seguinte jeito
 ![alt text](Img/Elastic-Ip-2.png)
 ![alt text](Img/Elastic-Ip-3.png)
 
-Apos os dois IPs Criados, Clicamos butao direito em um, clicamos associar, lá selecionaremos a nossa instancia.
+Apos os dois IPs Criados, Clicamos botão direito em um, clicamos associar, lá selecionaremos a nossa instancia.
 Repetimos os mesmos passos para a outra instancia.
 
 ## Conectar a Maquina Linux
@@ -331,4 +331,5 @@ Para permissões daremos as seguintes:
 ![alt text](Img/image-28.png)   
 
 Com isto o servidor pode ser acedido via ftp://ip/pasta_partilhada
+
 
