@@ -238,77 +238,77 @@ Neste caso como vamos querer um servidor HTTP, FTP, DNS, SMB e AD vamos adiciona
 
 ![alt text](Img/image-2.png)
 
-![alt text](Img/Image-3.png)
+![alt text](Img/image-3.png)
 
 Agora clicamos para promover para um domain controller.
 
-![alt text](Img/Image-4.png)
+![alt text](Img/image-4.png)
 
 Aqui escolheremos o nosso dominio. Apos isso so dar next até ao pre requesitos e clicaremos install e esperamos acabar de instalar
 
-![alt text](Img/Image-5.png)
+![alt text](Img/image-5.png)
 
 A maquina ira reiniciar e apos reiniciar estará o Domain Controller pronto. agora voltando ao server manager, iremos tratar do IIS clicando em tools e indo IIS
 
-![alt text](Img/Image-6.png)
+![alt text](Img/image-6.png)
 
 Aqui dentro adicionaremos 3 sites, um para cada grupo (central, oriental e ocidental).
 
-![alt text](Img/Image-7.png)
+![alt text](Img/image-7.png)
 
-![alt text](Img/Image-8.png)
+![alt text](Img/image-8.png)
 
-![alt text](Img/Image-9.png)
+![alt text](Img/image-9.png)
 
 Agora iremos na pasta de cada um deles adicionar o seu devido index.html
 
-![alt text](Img/Image-10.png)
+![alt text](Img/image-10.png)
 
 Com os sites criados e os index.html adicionados. agora devemos via DNS no windows server ou DNS pessoal como cloudflare / noip adicionar os devidos ips aos devidos subdominios.
 
-![alt text](Img/Image-11.png)
+![alt text](Img/image-11.png)
 
 Via Windows Server:
 
-![alt text](Img/Image-12.png)
+![alt text](Img/image-12.png)
 
-![alt text](Img/Image-13.png)
+![alt text](Img/image-13.png)
 
-![alt text](Img/Image-14.png)
+![alt text](Img/image-14.png)
 
 Com isto agora estarão os 3 sites do IIS no ar
 
-![alt text](Img/Image-15.png)
+![alt text](Img/image-15.png)
 
 Para adicionar certificado, faremos pelo proprio IIS um selfsigned certificate  
 
-![alt text](Img/Image-16.png)
+![alt text](Img/image-16.png)
 
-![alt text](Img/Image-17.png)
+![alt text](Img/image-17.png)
 
-![alt text](Img/Image-18.png)
+![alt text](Img/image-18.png)
 
 Apos criar os certificados iremos para os sites e para importar clicaremos em bindings
 
-![alt text](Img/Image-19.png)
+![alt text](Img/image-19.png)
 
-![alt text](Img/Image-20.png)
+![alt text](Img/image-20.png)
 
 com isto feito podemos agora entrar por https as paginas clicando em avançados e continuar evitando assim o erro.
 
-![alt text](Img/Image-21.png)
+![alt text](Img/image-21.png)
 
 ## Windows Server SMB
 
 Agora para a partilha de pastas via SMB primeiro precisamos criar uma pasta num diretorio a escolha, com a pasta criada clicaremos butão direito --> propriedades, dentro das propriedades iremos em sharing(partilha) e depois em advanced sharing
 
-![alt text](Img/Image-22.png)
+![alt text](Img/image-22.png)
 
-![alt text](Img/Image-23.png)
+![alt text](Img/image-23.png)
 
 Com esta pasta partilhada, indo em permissões e ativando Full control podemos agora aceder ela via `\\IP\NomeDaPasta`
 
-![alt text](Img/Image-24.png)
+![alt text](Img/image-24.png)
 
 Para configurar com permissões mais ''Serias'' e de forma protegida iria requirir criar outros usuarios e configurar na parte security a permissao devida de cada um, este passo ira ser pulado apenas por simplicidade.
 
@@ -316,18 +316,19 @@ Para configurar com permissões mais ''Serias'' e de forma protegida iria requir
 
 Agora para o FTP dentro do windows server, iremos de novo ao Server Manager, de novo entraremos nas tools e em IIS
 
-![alt text](Img/Image-25.png)
+![alt text](Img/image-25.png)
 
 Semelhante a criar um site desta vez adicionaremos um FTP Site (podemos utilizar a mesma pasta do smb por simplicidade).
 
-![alt text](Img/Image-26.png)
+![alt text](Img/image-26.png)
 
-![alt text](Img/Image-27.png)
+![alt text](Img/image-27.png)
 
 Aqui se não acharem necessario podem so deixar por ip, neste caso optei pela dns a qual pode ser configurada de forma semelhante a como foi configurado os subdominios para o server http.
 
 Para permissões daremos as seguintes:
 
-![alt text](Img/Image-28.png)   
+![alt text](Img/image-28.png)   
 
 Com isto o servidor pode ser acedido via ftp://ip/pasta_partilhada
+
